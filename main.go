@@ -7,7 +7,7 @@ import (
 
 func main () {
 	c := cron.New()
-	c.AddFunc("@every 5s",func() {
+	c.AddFunc("@every 1m",func() {
 		fileName := time.Now().Format("20060102150405")+".json"
 		getTransactionsByAccount(fileName)
 	})
